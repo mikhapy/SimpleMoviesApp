@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MoviesApp</string>
+    <string name="something_wrong_updating">Failed to update</string>
+    <string name="retry">Retry</string>
+    <string name="wrong_argument_received">Wrong argument received</string>
+    <string name="movie">Movie</string>
+    <string name="movies">Movies</string>
+    <string name="overview">Overview</string>
+    <string name="votes_count">%1$s votes</string>
+    <string name="show_only_favorites">Show only favorites</string>
+    <string name="view_more">View more</string>
+    <string name="background_movie_image">Background movie image</string>
+    <string name="favorite_icon">favorite_icon</string>
+    <string name="star_icon">Star icon</string>
+</resources>

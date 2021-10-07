@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+
+
+        <variable
+            name="viewModel"
+            type="com.mikha.moviesapp.ui.moviedetail.MovieDetailViewModel" />
+
+
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:context=".ui.moviedetail.MovieDetailFragment">
+
+                <ImageView
+                    android:id="@+id/posterImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:foreground="@drawable/image_overlay"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/test_img"
+                    android:contentDescription="@string/background_movie_image"
+                    app:layout_constraintHeight_percent="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:posterImageUrl="@{viewModel.movie.posterPath}" />
+
+                <TextView
+                    android:id="@+id/titleTxt"
+                    style="@style/BigTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="@{viewModel.movie.originalTitle}"
+                    android:textAlignment="textStart"
+                    app:layout_constraintBottom_toTopOf="@+id/votesCountTxt"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:text="Title Testing" />
+
+                <ImageView
+                    android:id="@+id/iconStarImg"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:src="@drawable/ic_star"
+                    android:contentDescription="@string/star_icon"
+                    app:layout_constraintBottom_toTopOf="@+id/releaseDateTxt"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/voteAverageTxt"
+                    style="@style/RatingText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@{String.valueOf(viewModel.movie.voteAverage)}"
+                    app:layout_constraintBottom_toBottomOf="@+id/iconStarImg"
+                    app:layout_constraintStart_toEndOf="@+id/iconStarImg"
+                    app:layout_constraintTop_toTopOf="@+id/iconStarImg"
+                    tools:text="8.7" />
+
+                <TextView
+                    android:id="@+id/votesCountTxt"
+                    style="@style/SecondaryText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@{@string/votes_count(String.valueOf(viewModel.movie.voteCount))}"
+                    app:layout_constraintBottom_toBottomOf="@+id/voteAverageTxt"
+                    app:layout_constraintStart_toEndOf="@+id/voteAverageTxt"
+                    app:layout_constraintTop_toTopOf="@+id/voteAverageTxt"
+                    tools:text="837 votes" />
+
+                <TextView
+                    android:id="@+id/releaseDateTxt"
+                    style="@style/SecondaryText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="@{viewModel.movie.releaseDate}"
+                    app:layout_constraintBottom_toBottomOf="@+id/posterImg"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:text="20 Sept" />
+
+                <TextView
+                    android:id="@+id/OverviewLabelTxt"
+                    style="@style/Title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/overview"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/posterImg" />
+
+                <TextView
+                    android:id="@+id/overviewTxt"
+                    style="@style/Subtitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@{viewModel.movie.overview}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/OverviewLabelTxt"
+                    tools:text="Female adventurer Parker joins a crew of male trophy hunters in a remote wilderness park. Their goal: slaughter genetically recreated dinosaurs for sport using rifles, arrows, and grenades. After their guide is killed by raptors, the team tries to escape the park – but the hunters quickly become the hunted. Even worse, the park’s manager suspects Parker of being a spy and sends a hit squad after her. This battle’s about to become primitive!" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/android-projects/MNewsApp/app/src/main/res/drawable/image_overlay.xml" value="0.34791666666666665" />
+        <entry key="..\:/android-projects/MNewsApp/app/src/main/res/drawable/swipe_item.xml" value="0.22631578947368422" />
+        <entry key="..\:/android-projects/MNewsApp/app/src/main/res/layout-sw600dp-land/fragment_home.xml" value="0.3203125" />
+        <entry key="..\:/android-projects/MNewsApp/app/src/main/res/layout-sw600dp/fragment_home.xml" value="0.28005464480874315" />
+        <entry key="..\:/android-projects/MNewsApp/app/src/main/res/layout-sw600dp/item_news.xml" value="0.24609375" />
+        <entry key="..\:/android-projects/MNewsApp/app/src/main/res/layout/activity_main.xml" value="0.38405797101449274" />
+        <entry key="..\:/android-projects/MNewsApp/app/src/main/res/layout/app_bar_main.xml" value="0.5" />
+        <entry key="..\:/android-projects/MNewsApp/app/src/main/res/layout/article_detail_fragment.xml" value="0.33125" />
+        <entry key="..\:/android-projects/MNewsApp/app/src/main/res/layout/content_main.xml" value="0.38405797101449274" />
+        <entry key="..\:/android-projects/MNewsApp/app/src/main/res/layout/fragment_home.xml" value="0.4466666666666667" />
+        <entry key="..\:/android-projects/MNewsApp/app/src/main/res/layout/image_overlay.xml" value="0.33177083333333335" />
+        <entry key="..\:/android-projects/MNewsApp/app/src/main/res/layout/item_news.xml" value="0.4466666666666667" />
+        <entry key="..\:/android-projects/MNewsApp/app/src/main/res/layout/nav_header_main.xml" value="0.3713768115942029" />
+        <entry key="..\:/android-projects/MNewsApp/app/src/main/res/menu/activity_main_drawer.xml" value="0.5546875" />
+        <entry key="..\:/android-projects/MNewsApp/app/src/main/res/menu/main.xml" value="0.5546875" />
+        <entry key="..\:/android-projects/MoviesApp/app/src/main/res/drawable/ic_home.xml" value="0.2929824561403509" />
+        <entry key="..\:/android-projects/MoviesApp/app/src/main/res/drawable/side_nav_bar.xml" value="0.2929824561403509" />
+        <entry key="..\:/android-projects/MoviesApp/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/android-projects/MoviesApp/app/src/main/res/layout/app_bar_main.xml" value="0.18289473684210528" />
+        <entry key="..\:/android-projects/MoviesApp/app/src/main/res/layout/content_main.xml" value="0.18289473684210528" />
+        <entry key="..\:/android-projects/MoviesApp/app/src/main/res/layout/fragment_home.xml" value="0.38433179723502303" />
+        <entry key="..\:/android-projects/MoviesApp/app/src/main/res/layout/item_movie.xml" value="0.5" />
+        <entry key="..\:/android-projects/MoviesApp/app/src/main/res/layout/item_news.xml" value="0.8333333333333334" />
+        <entry key="..\:/android-projects/MoviesApp/app/src/main/res/layout/movie_detail_fragment.xml" value="0.36578947368421055" />
+        <entry key="..\:/android-projects/MoviesApp/app/src/main/res/layout/movie_list_fragment.xml" value="0.3333333333333333" />
+        <entry key="..\:/android-projects/MoviesApp/app/src/main/res/layout/nav_header_main.xml" value="0.46710526315789475" />
+        <entry key="..\:/android-projects/MoviesApp/app/src/main/res/menu/activity_main_drawer.xml" value="0.46710526315789475" />
+        <entry key="..\:/android-projects/MoviesApp/app/src/main/res/menu/filter_menu.xml" value="0.18289473684210528" />
+        <entry key="..\:/android-projects/MoviesApp/app/src/main/res/menu/main.xml" value="0.46710526315789475" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

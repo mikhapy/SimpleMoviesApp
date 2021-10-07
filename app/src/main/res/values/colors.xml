@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="primaryColor">@color/TColorBlue100</color>
+    <color name="primaryDarkColor">@color/TColorBlue120</color>
+
+    <color name="TColorNavy100">#00192E</color>
+    <color name="TColorNeutral10">#2d394A</color>
+    <color name="TColorNeutral20">#677889</color>
+    <color name="TColorNeutral50">#AABED2</color>
+    <color name="TColorBlue100">#005Af0</color>
+    <color name="TColorBlue120">#0048C0</color>
+    <color name="TColorRed">#E94F4F</color>
+
+</resources>
