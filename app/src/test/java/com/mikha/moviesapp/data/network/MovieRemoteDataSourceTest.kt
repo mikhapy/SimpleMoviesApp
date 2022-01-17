@@ -7,6 +7,7 @@ import com.nhaarman.mockitokotlin2.mock
 import com.nhaarman.mockitokotlin2.times
 import com.nhaarman.mockitokotlin2.whenever
 import junit.framework.TestCase.assertEquals
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runBlockingTest
 import org.junit.Before
 import org.junit.jupiter.api.Test
@@ -26,18 +27,21 @@ class MovieRemoteDataSourceTest: BaseUnitTest() {
 
     }
 
+    @ExperimentalCoroutinesApi
     @Test
     fun getMoviesFromService() = runBlockingTest {
         movieService.getPopularMovies()
         verify(movieService, times(1)).getPopularMovies()
     }
 
+    @ExperimentalCoroutinesApi
     @Test
     fun getMoviesReturnSuccess() = runBlockingTest {
         mockSuccessfulCase()
         assertEquals(Resource.success(movies), movieRemoteDataSource.getMovies())
     }
 
+    @ExperimentalCoroutinesApi
     @Test
     fun getMoviesReturnError() = runBlockingTest {
         mockFailureCase()
