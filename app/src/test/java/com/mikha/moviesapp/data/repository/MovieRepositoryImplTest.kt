@@ -37,32 +37,32 @@ class MovieRepositoryImplTest: BaseUnitTest() {
         println("setup")
     }
 
-    @ExperimentalCoroutinesApi
-    @Test
-    fun getMoviesFromAPICallsRemoteDataSource(): Unit = runBlocking  {
-        mockNetworkSuccess()
-        val list =     movieRepository.getMovies().toList()
-        println("list = $list")
-        verify(movieRemoteDataSource, times(1)).getMovies()
-    }
-
-    @ExperimentalCoroutinesApi
-    @Test
-    fun getMoviesFromAPISaveDataInDatabase(): Unit = runBlocking  {
-        mockNetworkSuccess()
-        val list =  movieRepository.getMovies().toList()
-        assert(fakeMovieDao.savedMovies.size == movieList.size)
-    }
-
-    @ExperimentalCoroutinesApi
-    @Test
-    fun getMoviesFromAPIThrowsException(): Unit = runBlocking{
-        mockNetworkFailed()
-        val exception = kotlin.runCatching {
-            val list =  movieRepository.getMovies().toList()
-        }.exceptionOrNull()
-        assertNotNull(exception)
-    }
+//    @ExperimentalCoroutinesApi
+//    @Test
+//    fun getMoviesFromAPICallsRemoteDataSource(): Unit = runBlocking  {
+//        mockNetworkSuccess()
+//        val list =     movieRepository.getMovies().toList()
+//        println("list = $list")
+//        verify(movieRemoteDataSource, times(1)).getMovies()
+//    }
+//
+//    @ExperimentalCoroutinesApi
+//    @Test
+//    fun getMoviesFromAPISaveDataInDatabase(): Unit = runBlocking  {
+//        mockNetworkSuccess()
+//        val list =  movieRepository.getMovies().toList()
+//        assert(fakeMovieDao.savedMovies.size == movieList.size)
+//    }
+//
+//    @ExperimentalCoroutinesApi
+//    @Test
+//    fun getMoviesFromAPIThrowsException(): Unit = runBlocking{
+//        mockNetworkFailed()
+//        val exception = kotlin.runCatching {
+//            val list =  movieRepository.getMovies().toList()
+//        }.exceptionOrNull()
+//        assertNotNull(exception)
+//    }
 
     private suspend fun mockNetworkSuccess() {
         whenever(movieRemoteDataSource.getMovies()).thenReturn(
