@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mikha.moviesapp.databinding.MovieListFragmentBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -41,7 +42,7 @@ class MovieListFragment : Fragment() {
 
 
         binding.recyclerView.apply {
-            layoutManager = LinearLayoutManager(context)
+            layoutManager = GridLayoutManager(context, 2)
             adapter = movieAdapter
         }
 

@@ -40,13 +40,13 @@ object AppModule {
 
     @Singleton
     @Provides
-    fun provideApplicationDatabase(@ApplicationContext context: Context): ApplicationDatabase {
-        return Room.databaseBuilder(context, ApplicationDatabase::class.java, ApplicationDatabase.DB_NAME).build()
-    }
+    fun provideMovieRepository(dataSource: MovieRemoteDataSource, localDataSource: ApplicationDatabase): MovieRepositoryImpl = MovieRepositoryImpl(dataSource, localDataSource)
 
     @Singleton
     @Provides
-    fun provideMovieRepository(dataSource: MovieRemoteDataSource, localDataSource: ApplicationDatabase): MovieRepositoryImpl = MovieRepositoryImpl(dataSource, localDataSource)
+    fun provideApplicationDatabase(@ApplicationContext context: Context): ApplicationDatabase {
+        return Room.databaseBuilder(context, ApplicationDatabase::class.java, ApplicationDatabase.DB_NAME).build()
+    }
 
     @Singleton
     @Provides
